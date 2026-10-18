@@ -7,15 +7,18 @@ const ghosttext = document.getElementById("ghosttext");
 const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2")
 
-//timmer
-let timer;
-
 function finishintro() {
-    intro.classList.add("fade-out");
+    intro.style.display= "none";
 
-    setTimeout(() => {
-        intro.style.display= "none";
-    }, 1000);
+    // show ghost video
+    ghostscene.classList.add("active");
+
+    const ghostvideo = document.getElementById("ghost")
+    ghostvideo.currentTime = 0
+
+    ghostvideo.play().catch(error => {
+        console.log("ghost vid error:",error);
+    })
 }
 
 // reveal web when vid ends
@@ -24,18 +27,3 @@ video.addEventListener("ended",finishintro);
 //handle vid loading error
 video.addEventListener("error",finishintro);
 
-// start invisible timer
-function starttimer() {
-    clearTimeout(timer);
-
-    timer= setTimeout(() =>{
-        document.getElementById("timeUpScreen").classList.add("active");
-    },45000);
-}
-
-// ghost appear n talk
-function startghostconversation() {
-    ghoststep = 0;
-    ghostscene.classList.add("active");
-    showghostline();
-}
