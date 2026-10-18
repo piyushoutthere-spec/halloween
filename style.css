@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+/*fullscreen intro*/
+#intro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#intro video {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+/*main web*/
+#homepg {
+    display: flex;
+    align-items: center;
+    text-align:center;
+    justify-content: flex-start;
+    background-image:url(assets/Happy\ Holidays.gif), url(assets/Happy\ Holidays.gif), url("assets/monuments\ to\ the\ dead.jpg");
+    background-position: left center , right center, center center;
+    padding:20px;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size:500px auto, 500px auto,cover;
+    flex-direction: column;
+}
+
+#homepg h1{
+    font-size:50px;
+    margin-bottom: 10px;
+    color:beige;
+}
+
+#homepg p{
+    color:red;
+    margin-top:0;
+    font-size:25px;
+}
