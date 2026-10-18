@@ -43,3 +43,38 @@
     margin-top:0;
     font-size:25px;
 }
+
+#ghostscene {
+    position: fixed;
+    z-index: 500;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ghostscene.active{
+    display:flex;
+}
+
+#ghost{
+    width:250px;
+    height: auto;
+}
+
+#ghostdialogue{
+    width:auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#ghosttext{
+    font-size:20px;
+    line-height: 1.5;
+}
+
+#ghostoptions button{
+    display:block;
+    width:100%;
+    margin-top:10px;
+    background:#222;
+}
